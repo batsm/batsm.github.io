@@ -1,0 +1,661 @@
+<style>
+body, html 
+{
+	height: 100%;
+	width: 100%;
+}
+
+body, html 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+       
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    background-color: #141619;
+	position: fixed;
+    top: 0;
+    width: 99.10%;
+	z-index: 1;
+	transition-duration: 0.4s;
+}
+
+li
+{
+	float: left;
+}
+
+li a {
+    display: block;
+	color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: cornflowerblue;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: cornflowerblue;
+	transition-duration: 0.4s;
+}
+
+li a:hover {
+    background-color: #272a30;
+	transition-duration: 0.3s;
+    color: cornflowerblue;
+}
+
+.active {
+    background-color: #272a30;
+    color: cornflowerblue;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #eaeaea;
+	border: none;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+    margin: 4px 2px;
+	transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button1
+{
+	background-color: #eaeaea;
+	color: black;
+	border: 2px solid #9b9b9b;
+}
+
+button1:hover
+{
+	background-color: #828282;
+}
+
+.parallax 
+{
+	/* Backgtound image used */
+	background-color: #272a30;
+	opacity: 1;
+	padding-left: 0px;
+	height: 100%;
+	/*Creates the actual parallax effect*/
+	background-attachment: fixed;
+	background-position: stretch;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallaxhead
+{
+	font-size: 40px;
+}
+
+.MainText
+{
+	height: 1000px;
+	background-image: url("Stars.jpg");
+	height: 100%;
+	font-size: 36px;
+}
+
+.parallax2
+{
+	/* Backgtound image used */
+	background-image: url("Twenty One Pilots Logo.png");;
+	height: 100%;
+	padding-left:0px;
+	/*Creates the actual parallax effect*/
+	background-attachment: fixed;
+	background-position: stretch;
+	background-repeat: no-repeat;
+	background-size: cover;	
+    overflow-y: auto;
+}
+
+.button
+{
+	background-color: #eaeaea;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1
+{
+	background-color: #eaeaea;
+	color: black;
+	border: 2px solid #9b9b9b;
+}
+
+.button1:hover
+{
+	background-color: #828282;
+}
+
+.Loginbutton1
+{
+	background-color: #4CAF50;
+	color: black;
+	border: 2px solid #4CAF50;
+}
+
+.Loginbutton1:hover
+{
+	background-color: #3e8e41;
+	transition-duration: 0.4s;
+}
+
+.Cancelbutton1
+{
+	background-color: #f44336;
+	color: black;
+	border: 2px solid #f44336;
+}
+
+.Cancelbutton1:hover
+{
+	background-color: #da190b;
+	transition-duration: 0.4s;
+}
+
+.welcome
+{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	box-sizing: border-box;
+	font-size: 35px;
+	color: #777;
+	background-color:white;
+	text-align:center;
+	text-align: justify;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.MainNews
+{
+	color: #777;
+	background-color:#141619;
+	text-align:center;
+	padding:50px 80px;
+	text-align: justify; 
+	height: 50%;
+}
+
+.cardbackground
+{
+    margin: 0px;
+    border: 0px;
+	padding-bottom:0px;
+    padding-top: 40px;
+    padding-right: 0px;
+    padding-left: 150px;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.card
+{
+	position: relative;
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 350px;
+	height: 435px;
+	top: 10px;
+	left: 75px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.cardheader
+{
+	background-color: #141619;
+	background-size: 100%;
+	height: 125px;
+    color: #141619;
+    padding: 10px;
+    font-size: 40px;
+	transition-duration: 0.4s;
+    margin: 0px;
+}
+
+.cardcontainer
+{
+	padding: 1px;
+    height: 288px;
+	background-color: #141619;
+    color: #818181;
+	font-size: 25px;
+	transition-duration: 0.4s;
+    margin: 0px;
+}
+
+.cardcontents
+{
+    text-align-last: left;
+    margin: 0px;
+    height: 33px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: #141619;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: cornflowerblue;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: cornflowerblue;
+    cursor: pointer;
+}
+.cardtext
+{
+    padding-top: 5px;
+    margin: 0px;
+}
+
+.cardcontainer:hover
+{
+	background-color: #272a30;
+    color: cornflowerblue;
+	transition-duration: 0.4s;
+}
+
+.cardheader:hover
+{
+	cursor: pointer;
+	   -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+	transition-duration: 0.4s;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 250; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #141619; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 5px 50px 0px 10px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: cornflowerblue;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: cornflowerblue;
+    transition: 0.3s;
+}
+
+.sidenav b {
+    padding: 1px 0px 5px 15px;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav b:hover, .offcanvas b:focus{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.SongsSideNav {
+    height: 100%; /* 100% Full-height */
+    width: 250; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #141619; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.SongsSideNav a {
+    padding: 5px 137px 0px 10px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: cornflowerblue;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: cornflowerblue;
+    transition: 0.3s;
+}
+
+.SongsSideNav b {
+    padding: 1px 0px 5px 15px;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.SongsSideNav b:hover, .offcanvas b:focus{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+
+/* Slideshow container */
+.mySlides fade
+{
+    display:none;   
+}
+
+.Slideshow 
+{
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    height: 900px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext 
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+/* Position the "next button" to the right */
+.next 
+{
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+{
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+input[type=text], input[type=password], input[type=email]
+{
+    width: 40%;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #141619;
+    color: #818181;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-color: cornflowerblue;
+}
+
+.LoginContainer
+{
+	position: relative;
+    color: #141619;
+	left: 34.5%;
+	top: 200px;
+	width: 600px;
+	height: 500px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.AccountTitle
+{
+    margin: 0px;
+    padding-top: 20px;
+    font-size: 50px;
+}
+
+.LoginHeader
+{
+	height: 100px;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: cornflowerblue;
+    display: block;
+}
+
+.Login
+{
+    height: 100%;
+	background-color: #141619;
+    color: #818181;
+	font-size: 20px;
+	transition-duration: 0.4s;
+}
+
+.LoginText
+{
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.ForumButtons
+{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #141619;
+	color: #818181;
+	border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: cornflowerblue;
+}
+
+.ForumButtons:hover
+{
+    background-color: #272a30;
+}
+
+.CreateAccountContainer
+{
+	position: relative;
+    color: #141619;
+	left: 34.5%;
+	top: 100px;
+	width: 600px;
+	height: 700px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.HomeParagraph
+{
+    font-size: 20px;
+}
+
+.SongsCard
+{
+	position: relative;
+	display: inline-block;
+	margin-left: 330px;
+	margin-top: 50px;
+	width: 1000px;
+	height: 1300px;
+	top: 10px;
+	left: 75px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.SongsCardHeader
+{
+	background-color: #141619;
+	background-size: 100%;
+	height: 300px;
+    color: #141619;
+    padding: 10px;
+    font-size: 40px;
+	transition-duration: 0.4s;
+    margin: 0px;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.SongsCardContainer
+{
+	padding: 1px;
+    height: 1000px;
+	background-color: #141619;
+    color: #818181;
+	font-size: 25px;
+	transition-duration: 0.4s;
+    margin: 0px;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.SongsCardContent
+{
+    text-align-last: left;
+    margin: 0px;
+    height: 33px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: #141619;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: cornflowerblue;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: cornflowerblue;
+    cursor: pointer;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+.SongsCardText
+{
+    padding-top: 5px;
+    margin: 0px;
+    overflow-y: hidden; /*Removes second scrollbar*/
+}
+
+.SongsCardContainer:hover
+{
+	background-color: #272a30;
+    color: cornflowerblue;
+	transition-duration: 0.4s;
+}
+
+.SongsCardHeader:hover
+{
+	cursor: pointer;
+	   -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+	transition-duration: 0.4s;
+}
+
+
