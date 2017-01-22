@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script type="text/javascript" src="JavaScript.js"></script>
+</head>
+
+<body>
+    <div class="parallax2">
+    <ul>
+        <li><a href="Plays Music.html">Home</a></li>
+        <li><a href="#news" onclick="openNav()">Songs</a></li>
+        <li><a href="Artists.html">Artists</a></li>
+        <li><a href="#about">About</a></li>
+        <li  class="active" style="float:right;"><a id="LoginButton" ; href="#Login">Login</a></li>
+        <li onclick="Logout();" style="float:right"><a id="CreatAccount" ; href="Create Account.html">Create Account</a></li>
+    </ul>
+
+        <div class="LoginContainer">
+            <div class="Login">
+                <div class="LoginHeader">
+                    <h3 class="AccountTitle">Login</h3>
+                </div>
+                <div class="LoginText">
+                    <lable class="LoginText"><b>Username:</b></lable>
+                    <div>
+                        <input type="text" placeholder="Enter Username" name="Username" required>
+                    </div>
+                </div>
+                
+                <div class="LoginText">
+                    <lable><b>Password:</b></lable>
+                    <div>
+                        <input type="password" placeholder="Enter Password" name="Password" required>
+                    </div>
+                </div>
+                <div class="LoginText">
+                    <button class="ForumButtons" type="submit">New? Create an account!</button>
+                    <button class="ForumButtons" type="submit">Login</button>
+                </div>
+        </div>
+    </div>
+    <br>
+    <div class="parallax2"></div>
+    </div>
+</body>
+</html>
